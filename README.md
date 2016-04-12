@@ -10,6 +10,9 @@
 - R&RStudio
 - Linear model
 - Reproducible research
+- Cluster analysis (Random forest and Tree clustering method)
+
+
 
 Suggestions?
 
