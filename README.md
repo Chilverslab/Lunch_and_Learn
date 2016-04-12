@@ -1,7 +1,7 @@
 ## Chilvers Lab Lunch and Learn
 ### Every Tuesday
 ###Schedule
-- Apr. 12 Basic R (_Zach Noel_)
+- Apr. 12 [Basic R, Rmarkdown and Rstudio](markdown.md) (_Zach Noel_)
 - Apr. 19 TBD
 - Apr. 26 TBD
 - May. 02 TBD
