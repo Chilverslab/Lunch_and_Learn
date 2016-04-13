@@ -2,7 +2,7 @@
 ### Every Tuesday
 ###Schedule
 - Apr. 12 [Basic R](01_BasicR/basicR.md) (_Zach Noel_)
-- Apr. 19 [Rmarkdown and github](markdown.md) (_Jie and Alejandro_)
+- Apr. 19 [Rmarkdown and github](02_GitMarkdown/markdown.md) (_Jie and Alejandro_)
 - Apr. 26 TBD
 - May. 02 TBD
 
