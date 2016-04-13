@@ -326,9 +326,42 @@ std.error(mat1[, 1])</code></pre>
 <p>Writing a csv file from R</p>
 <pre class="r"><code>write.csv(csv2, &quot;newcsv.csv&quot;) # create a new csv file</code></pre>
 <p>.txt files can be a little different to load into R. I saved this .txt file from a .csv file so we have to specify that we want the header (column headings) included and that the character that separates our numbers is a comma.</p>
-<pre class="r"><code>table &lt;- read.table(&quot;corr.txt&quot;, header = TRUE, sep = &quot;,&quot;)
-
-#Checking if files are equal
+<pre class="r"><code>table &lt;- read.table(&quot;corr.txt&quot;, header = TRUE, sep = &quot;,&quot;)</code></pre>
+<pre class="r"><code>dplyr::tbl_df(csv2)</code></pre>
+<pre><code>## Source: local data frame [30 x 8]
+## 
+##        X poison.plate          row.names   Estimate  Std..Error
+##    (int)        (int)             (fctr)      (dbl)       (dbl)
+## 1      1            1  AR_262.S.1.6.A:50  0.2015679  0.02190114
+## 2      2            2   AR127_S.2.3.A:50  0.7124134  0.12045387
+## 3      3            3  ARS_284.S1.4.A:50  0.1912248  0.02356113
+## 4      4            4    C-MNSO2_2-31:50 11.1716042 35.68833900
+## 5      5            5    C-NDSO2_1-11:50  0.1004031  0.01303869
+## 6      6            6 IASO_10_38.14rt:50  1.7368504  0.17004067
+## 7      7            7 IASO_10-39.16rt:50  1.7596686  0.33400018
+## 8      8            8    IASO_10.37.8:50  0.9321326  0.11354204
+## 9      9            9   IASO_6-10.15h:50  1.0825464  0.09580328
+## 10    10           10       ILSO_1-31:50  1.0734704  0.18624372
+## ..   ...          ...                ...        ...         ...
+## Variables not shown: Lower (dbl), Upper (dbl), level (dbl)</code></pre>
+<pre class="r"><code>dplyr::tbl_df(table)</code></pre>
+<pre><code>## Source: local data frame [30 x 7]
+## 
+##    poison.plate          row.names   Estimate  Std..Error        Lower
+##           (int)             (fctr)      (dbl)       (dbl)        (dbl)
+## 1             1  AR_262.S.1.6.A:50  0.2015679  0.02190114   0.15859664
+## 2             2   AR127_S.2.3.A:50  0.7124134  0.12045387   0.47607609
+## 3             3  ARS_284.S1.4.A:50  0.1912248  0.02356113   0.14499656
+## 4             4    C-MNSO2_2-31:50 11.1716042 35.68833900 -58.85092560
+## 5             5    C-NDSO2_1-11:50  0.1004031  0.01303869   0.07482046
+## 6             6 IASO_10_38.14rt:50  1.7368504  0.17004067   1.40322105
+## 7             7 IASO_10-39.16rt:50  1.7596686  0.33400018   1.10434148
+## 8             8    IASO_10.37.8:50  0.9321326  0.11354204   0.70935675
+## 9             9   IASO_6-10.15h:50  1.0825464  0.09580328   0.89457492
+## 10           10       ILSO_1-31:50  1.0734704  0.18624372   0.70804975
+## ..          ...                ...        ...         ...          ...
+## Variables not shown: Upper (dbl), level (dbl)</code></pre>
+<pre class="r"><code>#Checking if files are equal
 all.equal(csv2, table)</code></pre>
 <pre><code>## [1] &quot;Names: 7 string mismatches&quot;                                   
 ## [2] &quot;Length mismatch: comparison on first 7 components&quot;            

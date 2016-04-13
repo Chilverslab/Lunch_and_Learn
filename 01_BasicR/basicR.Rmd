@@ -288,6 +288,11 @@ that we want the header (column headings) included and that
 the character that separates our numbers is a comma.
 ```{r}
 table <- read.table("corr.txt", header = TRUE, sep = ",")
+```
+
+```{r}
+dplyr::tbl_df(csv2)
+dplyr::tbl_df(table)
 
 #Checking if files are equal
 all.equal(csv2, table)
