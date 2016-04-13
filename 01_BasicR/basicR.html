@@ -319,17 +319,17 @@ std.error(mat1[, 1])</code></pre>
 <h1>Read in a file with data</h1>
 <p>typically we will use .txt files or .csv files to load into R I prefer .csv files because they are just like excel files and you can manipulate them in excel .txt files may be better for different applications or data types</p>
 <p>we can read in a .csv file with the read.csv file and specifying the path to the file.</p>
-<pre class="r"><code>csv &lt;- read.csv(&quot;01_BasicR/corr.csv&quot;)</code></pre>
+<pre class="r"><code>csv &lt;- read.csv(&quot;/Users/zacharynoel/Desktop/R_intro/corr.csv&quot;)</code></pre>
 <pre class="r"><code>csv2 &lt;- read.csv(&quot;corr.csv&quot;)  # this will do the same thing only if the file exists 
 # in the project folder you created. i.e. the working
 # directory</code></pre>
 <p>Writing a csv file from R</p>
-<pre class="r"><code>write.csv(csv, &quot;newcsv.csv&quot;) # create a new csv file</code></pre>
+<pre class="r"><code>write.csv(csv2, &quot;newcsv.csv&quot;) # create a new csv file</code></pre>
 <p>.txt files can be a little different to load into R. I saved this .txt file from a .csv file so we have to specify that we want the header (column headings) included and that the character that separates our numbers is a comma.</p>
-<pre class="r"><code>table &lt;- read.table(&quot;01_BasicR/corr.txt&quot;, header = TRUE, sep = &quot;,&quot;)
+<pre class="r"><code>table &lt;- read.table(&quot;corr.txt&quot;, header = TRUE, sep = &quot;,&quot;)
 
 #Checking if files are equal
-all.equal(csv, table)</code></pre>
+all.equal(csv2, table)</code></pre>
 <pre><code>## [1] &quot;Names: 7 string mismatches&quot;                                   
 ## [2] &quot;Length mismatch: comparison on first 7 components&quot;            
 ## [3] &quot;Component 2: Attributes: &lt; target is NULL, current is list &gt;&quot; 
