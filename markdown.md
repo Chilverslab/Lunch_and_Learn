@@ -1,5 +1,5 @@
 #Chilvers' Lab Lunch and Learn
-April. 12 2016
+April. 19 2016
 
 ## Markdown and Git
 - Markdown syntax
