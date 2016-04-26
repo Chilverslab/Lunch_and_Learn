@@ -116,8 +116,10 @@ kable(head(ggplot2::mpg, n = 15), digits = 3, format = "markdown")
 
 When you click the **Knit**, it will render the document using the existing syntax.
 
+__________
+
+
 ## R chunks
-_________
 
 You can embed an R code chunk like this:
 
@@ -151,8 +153,9 @@ You can control the output of your chunks using different parameters:
 
 
 ## Including Plots
-You can also embed plots, for example:
+You can also embed plots, for example in this case using `echo=FALSE` only the 
+plot will be displayed:
 
 ![](markdown_tutorial_files/figure-html/pressure-1.png)
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Continues on [Markdown part 2](markdown_p2.md)
