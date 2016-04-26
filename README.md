@@ -17,3 +17,7 @@
 
 Suggestions?
 
+### Resources to learn basic coding skills
+* [Unix and perl to the rescue](http://korflab.ucdavis.edu/Unix_and_Perl/current.html)
+* [Code Academy](https://www.codecademy.com/)
+* [Rosalind](http://rosalind.info/problems/locations/)
