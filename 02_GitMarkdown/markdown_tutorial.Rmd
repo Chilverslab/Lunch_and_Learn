@@ -8,6 +8,7 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
+library(ggplot2)
 ```
 
 ## R Markdown
@@ -136,4 +137,31 @@ plot will be displayed:
 plot(pressure)
 ```
 
-Continues on [Markdown part 2](markdown_p2.md)
+Or if you have multiple plots:
+```
+## Sales Report {.tabset}
+ 
+### By Product
+ 
+(tab content)
+ 
+### By Region
+ 
+(tab content)
+```
+## Multiple plots {.tabset}
+ 
+### By class
+ 
+```{r}
+g <- ggplot(mpg, aes(class))
+# Number of cars in each class:
+g + geom_bar()
+```
+ 
+### Boxplot
+ 
+```{r}
+p <- ggplot(mpg, aes(class, hwy))
+p + geom_boxplot()
+```

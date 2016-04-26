@@ -158,4 +158,37 @@ plot will be displayed:
 
 ![](markdown_tutorial_files/figure-html/pressure-1.png)
 
-Continues on [Markdown part 2](markdown_p2.md)
+Or if you have multiple plots:
+```
+## Sales Report {.tabset}
+ 
+### By Product
+ 
+(tab content)
+ 
+### By Region
+ 
+(tab content)
+```
+## Multiple plots {.tabset}
+ 
+### By class
+ 
+
+```r
+g <- ggplot(mpg, aes(class))
+# Number of cars in each class:
+g + geom_bar()
+```
+
+![](markdown_tutorial_files/figure-html/unnamed-chunk-1-1.png)
+ 
+### Boxplot
+ 
+
+```r
+p <- ggplot(mpg, aes(class, hwy))
+p + geom_boxplot()
+```
+
+![](markdown_tutorial_files/figure-html/unnamed-chunk-2-1.png)
