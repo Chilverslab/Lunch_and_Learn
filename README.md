@@ -4,7 +4,7 @@
 ###Schedule
 
 - Apr  12 [Basic R](01_BasicR/basicR.md) (_Zach Noel_)
-- Apr  26 [Rmarkdown and github](markdown.md) (_Jie and Alejandro_)
+- Apr  26 [Rmarkdown and github](02_GitMarkdown/markdown.md) (_Jie and Alejandro_)
 - May  10 TBD
 - May  24 TBD
 
