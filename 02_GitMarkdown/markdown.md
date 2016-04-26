@@ -5,7 +5,7 @@ April 26 2016
 - git and github
 - join github organization
 - Rstudio and git 
-- [Markdown syntax](markdown_tutorial.Rmd)
+- Markdown syntax: [Rmarkdown](markdown_tutorial.Rmd) or [markdown](markdown_tutorial.md) version
 
 
 ## Rstudio
