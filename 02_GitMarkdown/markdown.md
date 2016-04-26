@@ -1,10 +1,12 @@
 #Chilvers' Lab Lunch and Learn
-April. 19 2016
+April 26 2016
 
 ## Markdown and Git
-- Markdown syntax
 - git and github
 - join github organization
+- Rstudio and git 
+- Markdown syntax: [Rmarkdown](markdown_tutorial.Rmd) or [markdown](markdown_tutorial.md) version
+
 
 ## Rstudio
 - Creating a project
