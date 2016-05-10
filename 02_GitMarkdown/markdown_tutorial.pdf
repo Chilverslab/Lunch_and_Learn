@@ -204,7 +204,4 @@ p + geom_boxplot()
 ```r
 # Extract r code
 knit("markdown_tutorial.Rmd", "R-code_markdown.R", tangle = TRUE)
-
-#Render a pdf
-knit("markdown_tutorial.Rmd", "markdown_tutorial.pdf")
 ```
