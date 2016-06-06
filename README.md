@@ -3,10 +3,11 @@
 
 ###Schedule
 
-- Apr  12 [Basic R](01_BasicR/basicR.md) (_Zach Noel_)
-- Apr  26 [Rmarkdown and github](02_GitMarkdown/markdown.md) (_Jie and Alejandro_)
-- May  10 TBD
-- May  24 TBD
+- Apr  12 [Basic R](01_BasicR/basicR.md) (_Zach_)
+- Apr  26 [git and github](02_GitMarkdown/gitLearn.md) (_Jie_)
+- May  10 [markdown](02_GitMarkdown/markdown.md) (_Alejandro_)
+- May  24 [command line blast]() (_Zach_)
+- June 7 [Sanger sequencing/assembly]()  (_Alejandro_)
 
 ###Topics to cover
 - R&RStudio
