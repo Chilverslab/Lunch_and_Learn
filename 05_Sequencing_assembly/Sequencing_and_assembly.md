@@ -133,7 +133,7 @@ UGENE also has a manual asssembly that could be useful:
 
 4. Then you can evaluate your assembly, but you won't have access to the chromatogram files (or at least I think so)
 
-![](media/image8.png =250x)
+![](media/image8.png)
 
 
 
