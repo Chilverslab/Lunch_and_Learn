@@ -7,7 +7,7 @@
 - Apr  26 [git and github](02_GitMarkdown/gitLearn.md) (_Jie_)
 - May  10 [markdown](02_GitMarkdown/markdown.md) (_Alejandro_)
 - May  24 [command line blast]() (_Zach_)
-- June 7 [Sanger sequencing/assembly]()  (_Alejandro_)
+- June 7 [Sanger sequencing/assembly](05_Sequencing_assembly/Sequencing_and_assembly.md)  (_Alejandro_)
 
 ###Topics to cover
 - R&RStudio
