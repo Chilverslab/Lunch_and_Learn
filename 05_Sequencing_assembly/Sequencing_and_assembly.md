@@ -56,7 +56,7 @@ then go to command prompt on windows:
 ![](http://www.howtogeek.com/wp-content/uploads/2012/04/650x408ximage279.png.pagespeed.gp+jp+jw+pj+js+rj+rp+rw+ri+cp+md.ic.AhX6XBOiQY.png)
 
 and copy and paste the data in the excel file and it should be done.
-Link for [4 way to rename files in windows](http://www.howtogeek.com/111859/how-to-batch-rename-files-in-windows-4-ways-to-rename-multiple-files/)
+[4 way to rename files in windows](http://www.howtogeek.com/111859/how-to-batch-rename-files-in-windows-4-ways-to-rename-multiple-files/)
 
 ### Renaming files in mac
 
@@ -72,7 +72,7 @@ Link for [4 way to rename files in windows](http://www.howtogeek.com/111859/how-
 
 - Copy and paste the command on the terminal.  
 
-If you want to be more geeky there are tow options:
+If you want to be more geeky there are two options:
 
 1. Create a bash file with the info in the excel and save it as `5-7Rename.sh` like [this](seqs/5-7Rename.sh) and then run within the folder:
 ```
