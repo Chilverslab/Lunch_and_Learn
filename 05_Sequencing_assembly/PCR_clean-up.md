@@ -10,7 +10,7 @@ later use.
   SAP (1 U/µL)             |0.125 µL (0.5 U)   |1.5 µL             |12 µL
   H2O                      |5 µL               |60 µL              |480 µL
 
-Add 5 µL of the mix to each sample and incubate the samples in the
+Add 5 µL of the mix to each sample (~20 µL PCR product) and incubate the samples in the
 thermocycler following the program below:
 
 -   37˚C for 45 mins.

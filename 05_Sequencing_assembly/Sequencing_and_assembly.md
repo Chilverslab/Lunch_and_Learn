@@ -8,7 +8,7 @@
 -   5 µL of PCR + 2 µL of ExoSAP-IT
 -   15 min at 37C followed by 15 min at 80ºC
 
-[**Homemade Exo SAP mix (Protocol)**]()
+[**Homemade Exo SAP mix (Protocol)**](PCR_clean-up.md)
 
 -   Different protocols online for cleaning
 -   Lower concentration of enzymes
@@ -21,5 +21,5 @@
 
 ## Sample prep and submission
 
-- [Protocol for macrogen submission](PCR_clean-up.md)
+- [Protocol for macrogen submission](Submission_macrogen.md)
 - [Submission form for MSU RTSF](https://rtsf.natsci.msu.edu/genomics/forms/general-sanger-submission-form/)
