@@ -26,8 +26,7 @@ that we are up to date on the account.
     - In this case, each sample will take two tubes if the target is going to be sequence in two directions.
     - Place tubes on a Ziploc bag.
 
-![](media/image1.png){width="4.874561461067366in"
-height="2.8303576115485565in"}
+![](media/image1.png)
 
 3.  **Shipment to Macrogen**
   
