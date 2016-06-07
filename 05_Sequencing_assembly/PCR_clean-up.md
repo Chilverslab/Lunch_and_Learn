@@ -8,7 +8,7 @@ later use.
   ------------------------ |------------------ |------------------ |------------------
   Exonuclease I (20U/µL)   |0.15 µL (3 U)      |1.8 µL             |14.4 µL
   SAP (1 U/µL)             |0.125 µL (0.5 U)   |1.5 µL             |12 µL
-  H~2~O                    |5 µL               |60 µL              |480 µL
+  H2O                      |5 µL               |60 µL              |480 µL
 
 Add 5 µL of the mix to each sample and incubate the samples in the
 thermocycler following the program below:
