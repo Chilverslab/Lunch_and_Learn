@@ -86,15 +86,55 @@ awk -F',' '{print("mv \"" $1 "\" \"" $2 "\"")}' test.txt | /bin/bash
 
 ## Assembling sequences
 There are different options for sequence assembly:
-- DNASTAR Lasergene (License require; GUI)
-- CLC Main workbench (License require; GUI)
-- Geneious (License require; GUI)
-- Phred, Phrap and consed (Free, but need register; command line)
-- CAP3 (Free, command line)
-- UGENE (Free, uses CAP3; GUI)
-- **Codoncode aligner (License require; GUI)**
-- Bioedit (Free, CAP3 plugin)
-- Chromaseq (Free, plugin within mesquite)
+  
+  - DNASTAR Lasergene (License require; GUI)
+  - CLC Main workbench (License require; GUI)
+  - Geneious (License require; GUI)
+  - Phred, Phrap and consed (Free, but need register; command line)
+  - CAP3 (Free, command line)
+  - UGENE (Free, uses CAP3; GUI)
+  - **Codoncode aligner (License require; GUI)**
+  - Bioedit (Free, CAP3 plugin)
+  - Chromaseq (Free, plugin within mesquite)
+
+### Codoncode aligner
+Usually in Chilvers lab we used **codoncode aligner** and there are tutorials for [sequence assembly](http://www.codoncode.com/aligner/tutorials/Assemble_in_groups_by_name.swf), and other [features](http://www.codoncode.com/aligner/tutorials/).
+
+**Codoncode aligner uses a floating license in our lab, so only one computer can use it at the time, please shut it down if you are done with the analysis**
+
+- Here is detailed [pdf file](assembly_codoncode.pdf) that I put together with the step-by-step to assemble sequences
+
+### UGENE
+
+UGENE has a workflow to assemble sequences but it requires reference sequences.
+
+![](https://ugene.net/wiki/download/attachments/16121890/Trim%20and%20Align%20Sanger%20Reads.png)
+
+
+UGENE also has a manual asssembly that could be useful:
+
+1. Open UGENE and go to the **tools** menu and select **sanger data analysis** and click on contig assembly with CAP3
+
+![](media/image5.png)
+
+
+
+2. A window will pop up asking for the **ab1** files to assemble, just click **add** and slected the files to assemble
+
+![](media/image6.png)
+
+
+
+3. You can just click **run** to obtain your contig assembly (ACE file) or you can select the **advanced** tab to modify parameters
+
+![](media/image7.png)
+
+
+
+4. Then you can evaluate your assembly, but you won't have access to the chromatogram files (or at least I think so)
+
+![](media/image8.png =250x)
+
 
 
 ## Sequencing Errors
