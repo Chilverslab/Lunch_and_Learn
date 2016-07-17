@@ -2,7 +2,9 @@
 title: "CommandLine_BLAST"
 author: "Zachary Noel"
 date: "July 15, 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: yes
 ---
 
 ###### This document provides instuctions on how to use command line BLAST and BLAST+ using a local database and using a specific database on NCBI. This is not an extensive tutorial, but rather is a basic introduction to speeding up your BLAST searches, or searching a large number of sequences quickley.
