@@ -1,0 +1,177 @@
+# This is a tutorial on how to go through the files from a MacorGen sanger sequencing plate assemble .abi files and write .fasta files 
+
+# Step 1. Download Ugene 
+# Step 2. Go to tools -> Sanger Data analysis -> Contig assembly with CAP3
+# Step 3. Add the two .abi files to assemble and make into one sequence 
+# Step 4. right click on the Contig_ref on the side bar 
+# Step 5. Repeat step 2-4 for each pair of .abi files
+
+# note* have not figured out how to do this with code, but I want to. 
+
+# Next, your folder with your .abi files is now going to be a mess with all kinds of files 
+
+# Open your terminal and navigate to your sequencing plate folder 
+
+$ cd "/dir_path"
+
+# Easy just type cd and drag and drop the folder into the terminal window then press enter 
+
+# Now we are going to select all files with the extension ".fa" and put that in a new folder 
+# First, however, we need to make  new directory 
+
+$ mkdir newdir
+$ find . -name \*.fa -exec cp {} \newdir \; 
+
+# Now you should have a new folder with all ".fa" files in there
+# Since I find it annoying to have all these files with the file extension ".fa", lets rename them ".fasta"
+
+$ for file in *.fa; do 
+$ mv "$file" "`basename $file .fa` .fasta"
+$ done
+
+# Next I used this following R script to change the sequence headers then make a new .fasta file 
+# This code is a little cumbersome and probably would be more efficient in python, but I can figure that out later 
+
+library("Biostrings")
+
+a1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A1_new.fasta")
+a2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A2_new.fasta")
+a3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A3_new.fasta")
+a4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A4_new.fasta")
+a5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A5_new.fasta")
+a6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_A6_new.fasta")
+b1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B1_new.fasta")
+b2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B2_new.fasta")
+b3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B3_new.fasta")
+b4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B4_new.fasta")
+b5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B5_new.fasta")
+b6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_B6_new.fasta")
+c1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C1_new.fasta")
+c2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C2_new.fasta")
+c3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C3_new.fasta")
+c4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C4_new.fasta")
+c5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C5_new.fasta")
+c6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_C6_new.fasta")
+d1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D1_new.fasta")
+d2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D2_new.fasta")
+d3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D3_new.fasta")
+d4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D4_new.fasta")
+d5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D5_new.fasta")
+d6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_D6_new.fasta")
+e1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E1_new.fasta")
+e2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E2_new.fasta")
+e3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E3_new.fasta")
+e4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E4_new.fasta")
+e5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E5_new.fasta")
+e6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_E6_new.fasta")
+f1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F1_new.fasta")
+f2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F2_new.fasta")
+f3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F3_new.fasta")
+f4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F4_new.fasta")
+f5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F5_new.fasta")
+f6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_F6_new.fasta")
+g1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G1_new.fasta")
+g2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G2_new.fasta")
+g3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G3_new.fasta")
+g4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G4_new.fasta")
+g5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G5_new.fasta")
+g6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_G6_new.fasta")
+h1 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H1_new.fasta")
+h2 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H2_new.fasta")
+h3 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H3_new.fasta")
+h4 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H4_new.fasta")
+h5 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H5_new.fasta")
+h6 <- readDNAStringSet("/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/18FCFAA000_H6_new.fasta")
+
+names(a1) <- "a1"
+names(a2) <- "a2"
+names(a3) <- "a3"
+names(a4) <- "a4"
+names(a5) <- "a5"
+names(a6) <- "a6"
+names(b1) <- "b1"
+names(b2) <- "b2"
+names(b3) <- "b3"
+names(b4) <- "b4"
+names(b5) <- "b5"
+names(b6) <- "b6"
+names(c1) <- "c1"
+names(c2) <- "c2"
+names(c3) <- "c3"
+names(c4) <- "c4"
+names(c5) <- "c5"
+names(c6) <- "c6"
+names(d1) <- "d1"
+names(d2) <- "d2"
+names(d3) <- "d3"
+names(d4) <- "d4"
+names(d5) <- "d5"
+names(d6) <- "d6"
+names(e1) <- "e1"
+names(e2) <- "e2"
+names(e3) <- "e3"
+names(e4) <- "e4"
+names(e5) <- "e5"
+names(e6) <- "e6"
+names(f1) <- "f1"
+names(f2) <- "f2"
+names(f3) <- "f3"
+names(f4) <- "f4"
+names(f5) <- "f5"
+names(f6) <- "f6"
+names(g1) <- "g1"
+names(g2) <- "g2"
+names(g3) <- "g3"
+names(g4) <- "g4"
+names(g5) <- "g5"
+names(g6) <- "g6"
+names(h1) <- "h1"
+names(h2) <- "h2"
+names(h3) <- "h3"
+names(h4) <- "h4"
+names(h5) <- "h5"
+names(h6) <- "h6"
+
+fasta.make <- list(a1, a2, a3, a4, a6,
+                   b2, b3, b4, b6,
+                   c1, c2, c3, c5, c6, 
+                   d1, d2, d5, d6,
+                   e1, e2, e4, e6,
+                   f2, f3, f4, f5, f6, 
+                   g1, g3, g4, g5, g6, 
+                   h1, h2, h3, h5, h6)
+file_path <- "/Users/zacharynoel/Google\ Drive/Michigan\ State/FungicideResistance/160504UMDE-006/fasta_files/new_fasta_files"
+paste(c(1, file_path), ".fasta")
+for (i in 1:length(fasta.make)){
+  filename <- paste(i, ".fasta")
+  writeXStringSet(fasta.make[[i]], filename, 
+                  append=FALSE,
+                  compress=FALSE, 
+                  compression_level=NA, 
+                  format="fasta")
+}
+
+
+# Now that we have got new sequence ID’s lets combine everything into one file. 
+# navigate to the directory with all the new .fasta files and concatenate them together into new file. 
+
+$ cat *.fasta > combined.fasta
+
+# Now you should have a file named combined.fasta with all the .fasta files we previously created. 
+# Now copy your combine.fasta into the directory created called BlastDB
+# I keep this on the main user directory 
+
+$ cp combine.fasta ~/BlastDB
+
+# Now we are going to create our own Blast database from the ~3000 sequences Alejo sequenced, we are going to call it oscap_db
+
+$ makeblastdb -in Seqs_11_12.final.fasta -title oscap_db -parse_seqids -dbtype nucl
+
+# Now we are set up to do a local BLAST search of all the ~3000 sequences Alejo sequenced
+
+$ blastn -db Seqs_11_12.final.fasta -query combine.fasta -out combine_local.csv -outfmt 10  -max_target_seqs 1
+
+# Next we will perform a remote BLAST search on NCBI using the entrez query of only looking for sequences from Robideau in oomycetes and ITS not COI
+
+# BLAST command line input
+$ blastn -db nt -query combine.fasta -out combine_online.csv -outfmt "10 qseqid salltitles staxids sseqid pident length mismatch gapopen qstart qend sstart send " -max_target_seqs 1 -remote -entrez_query "robideau[author] AND oomycetes[orgn] AND Internal Transcribed spacer NOT COI"
