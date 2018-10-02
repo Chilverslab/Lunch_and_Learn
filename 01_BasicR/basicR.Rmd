@@ -268,13 +268,12 @@ we can read in a .csv file with the read.csv file and
 specifying the path to the file.
 ```{r, eval=FALSE}
 csv <- read.csv("/Users/zacharynoel/Desktop/R_intro/corr.csv")
+# NOTE* if this directory does not on your computer it will not compile. 
 ```
 
 
 ```{r}
-csv2 <- read.csv("corr.csv")  # this will do the same thing only if the file exists 
-# in the project folder you created. i.e. the working
-# directory
+csv2 <- read.csv("corr.csv")  # this will do the same thing only if the file exists in the project folder you created. i.e. the working directory
 ```
 
 Writing a csv file from R

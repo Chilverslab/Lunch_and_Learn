@@ -1,6 +1,11 @@
-# CommandLine_BLAST
-Zachary Noel  
-July 15, 2016  
+---
+title: "CommandLine_BLAST"
+author: "Zachary Noel"
+date: "July 15, 2016"
+output:
+  html_document:
+    keep_md: yes
+---
 
 ###### This document provides instuctions on how to use command line BLAST and BLAST+ using a local database and using a specific database on NCBI. This is not an extensive tutorial, but rather is a basic introduction to speeding up your BLAST searches, or searching a large number of sequences quickley.
 Other options and instructions and be found [here](http://www.ncbi.nlm.nih.gov/books/NBK279675/). 
@@ -81,7 +86,7 @@ Now that we set up this database we can now search this database using the combi
 
 
 ```bash
-blastn -db Seqs_11_12.final.fasta -query combine.fasta -out combine_local.csv -outfmt 10  -max_target_seqs 1
+blastn -db Seqs_11_12.final.fasta -query combine.fasta -out combine_local.csv -outfmt 10  
 ```
 
 English translation: 
@@ -89,7 +94,11 @@ English translation:
 * do a nucleotide blast using the database fasta file Seqs_11_12.final.fasta (-db) 
 * using the combine.fasta file to search (-query) 
 * and save the output in a .csv file (-outfmt 10) 
-* and only save the top hit (-max_target_seqs)
+
+The flag -max_target_seqs should be used with extreme caution!! with this you flag you are going to be saving the first best hit in the database, not nessesarily the best hit so please be careful when using this flag. The first best hit can depend on the database used and the order of the database, so use this only if you want to obtain a quick and general result, but do not interpret this as the best hit.
+
+Link to paper explaining this misunderstanding
+https://academic.oup.com/bioinformatics/advance-article/doi/10.1093/bioinformatics/bty833/5106166
 
 # BLAST+ on a remote database
 
@@ -97,7 +106,7 @@ Next we will perform a remote BLAST search on NCBI using the entrez query of onl
 
 
 ```bash
-blastn -db nt -query combine.fasta -out combine_online.csv -outfmt "10 qseqid salltitles staxids sseqid pident length mismatch gapopen qstart qend sstart send " -max_target_seqs 1 -remote -entrez_query "robideau[author] AND oomycetes[orgn] AND Internal Transcribed spacer NOT COI"
+blastn -db nt -query combine.fasta -out combine_online.csv -outfmt "10 qseqid salltitles staxids sseqid pident length mismatch gapopen qstart qend sstart send " -remote -entrez_query "robideau[author] AND oomycetes[orgn] AND Internal Transcribed spacer NOT COI"
 ```
 
 English translation: 
@@ -108,7 +117,6 @@ English translation:
 * using the combine.fasta file (-query) to search 
 * and save the output in a .csv file (-outfmt "10..) 
 * named combine_online.csv (-out) keeping the sequence ID and the rest of the following information inside quotes 
-* and only save the top hit (-max_target_seqs)
 
 Other information: When performing a BLAST+ on NCBI it is advisable to first set up an account that way they know who is using NCBI and using their server to search. With only about 96 sequences to search, this is not a problem, but with many more sequences to search it is advisable to have an account. 
 
